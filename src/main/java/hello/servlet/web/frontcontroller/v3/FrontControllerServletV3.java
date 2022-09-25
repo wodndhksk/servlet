@@ -60,7 +60,6 @@ public class FrontControllerServletV3 extends HttpServlet {
 
     private Map<String, String> createParamMap(HttpServletRequest request) {
         Map<String, String> paramMap = new HashMap<>();
-        Enumeration<String> parameterNames = request.getParameterNames();
 
         request.getParameterNames().asIterator()
                 .forEachRemaining(paramName -> paramMap.put(paramName, request.getParameter(paramName)));
